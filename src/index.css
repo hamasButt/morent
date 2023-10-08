@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Inter, sans-serif;
+  background: #F5F5f5;
+}
+
+.nav {
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, .13); */
+  border-bottom: 2px solid rgba(0, 0, 0, .13);
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    border-bottom: none;
+
+  }
+}
+
+.bg-img {
+  background-image: url('./Vector.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgb(84, 166, 255);
+}
+
+.bg-img2 {
+  background-image: url('./vector2.png');
+  background-repeat: no-repeat;
+}
