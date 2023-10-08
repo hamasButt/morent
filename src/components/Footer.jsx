@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-white lg:px-[80px] lg:pt-[112px] pb-[76px] lg:mt-[112px]">
-      <div className="flex ">
+    <div className="bg-white lg:pl-[80px] lg:pr-[122px] lg:pt-[112px] pb-[76px] lg:mt-[112px]">
+      <div className="flex justify-between items-center ">
         <div className="flex flex-col  gap-6 max-w-[390px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,10 +23,54 @@ const Footer = () => {
             business.
           </p>
         </div>
-        <div>
-            
+        <div className="flex gap-32 items-center">
+          <div className="flex flex-col gap-8">
+            <span className="text-[26px] font-[600] text-black">About</span>
+            <div className="flex flex-col gap-6">
+              <span className="text-[22px]  text-[#90A3BF]">How It Works</span>
+              <span className="text-[22px]  text-[#90A3BF]">Featured</span>
+              <span className="text-[22px]  text-[#90A3BF]">Partnership</span>
+              <span className="text-[22px]  text-[#90A3BF]">
+                Business Relation
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col gap-8">
+            <span className="text-[26px] font-[600] text-black">Community</span>
+            <div className="flex flex-col gap-6">
+              <span className="text-[22px]  text-[#90A3BF]">Events</span>
+              <span className="text-[22px]  text-[#90A3BF]">Blog</span>
+              <span className="text-[22px]  text-[#90A3BF]">Podcast</span>
+              <span className="text-[22px]  text-[#90A3BF]">
+                Invite a Friend
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col gap-8">
+            <span className="text-[26px] font-[600] text-black">Socials</span>
+            <div className="flex flex-col gap-6">
+              <span className="text-[22px]  text-[#90A3BF]">Discord</span>
+              <span className="text-[22px]  text-[#90A3BF]">Instagram</span>
+              <span className="text-[22px]  text-[#90A3BF]">Twitter</span>
+              <span className="text-[22px]  text-[#90A3BF]">Facebook </span>
+            </div>
+          </div>
         </div>
       </div>
+      <svg
+        className="my-[60px]"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1761"
+        height="2"
+        viewBox="0 0 1761 2"
+        fill="none"
+      >
+        <path
+          d="M1760.67 0L0.666451 0V1.33333L1760.67 1.33333V0Z"
+          fill="#131313"
+          fill-opacity="0.16"
+        />
+      </svg>
     </div>
   );
 };
