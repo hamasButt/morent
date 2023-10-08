@@ -29,4 +29,6 @@ body {
 .bg-img2 {
   background-image: url('./vector2.png');
   background-repeat: no-repeat;
+  background-size: cover;
+  
 }

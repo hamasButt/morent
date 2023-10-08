@@ -6,7 +6,7 @@ const InitialCard = ({ header, card, image, subHeader }) => {
         card !== 1 ? "bg-img2" : "bg-img"
       }`}
     >
-      <div className="w-[360px] flex flex-col gap-4 ">
+      <div className="lg:min-w-[360px] max-w-[360px] flex flex-col gap-4 ">
         <h1 className="text-white text-[42px] font-500 leading-[150%] tracking-[-0.469px]">
           {header}
         </h1>

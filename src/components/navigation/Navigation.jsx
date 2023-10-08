@@ -55,7 +55,7 @@ function Navigation() {
     },
   ];
   return (
-    <div className="nav bg-white w-full lg:min-h-[166px] lg:max-h-[166px] p-10 ">
+    <div className="nav lg:fixed top-0 bg-white w-full lg:min-h-[166px] lg:max-h-[166px] p-10 ">
       <div className="flex items-center justify-between w-full">
         <div className="flex justify-between items-center w-full max-w-[800px]">
           <svg
