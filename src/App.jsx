@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="w-full h-screen">
       <Navigation />
-      <div className="px-20 lg:mt-[196px]">
+      <div className="lg:px-[64px] px-6 lg:mt-[166px]">
         <HeroSection />
       </div>
       <Footer />

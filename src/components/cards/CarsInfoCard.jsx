@@ -1,34 +1,190 @@
-import React, { Children } from "react";
+import React from "react";
+import PrimaryButton from "../PrimaryButton";
 
-function CarsInfoCard() {
+function CarsInfoCard({ item }) {
   return (
-    <div className="px-8 py-7 bg-white rounded-[12px] basis-[460px]">
+    <div className="lg:p-6 p-4  bg-white rounded-[12px] ">
       <div className="flex justify-between items-center">
-        <h1 className="text-[26px] text-black font-bold">Koenigsegg</h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="29"
-          height="26"
-          viewBox="0 0 29 26"
-          fill="none"
-        >
-          <path
-            d="M15.16 24.7469L14.8373 23.8002L14.8266 23.8042L15.16 24.7469ZM13.5066 24.7469L13.84 23.8042L13.8293 23.8002L13.5066 24.7469ZM14.3333 4.12029L13.5306 4.71629C13.6237 4.8415 13.7447 4.94321 13.8841 5.01329C14.0235 5.08336 14.1773 5.11986 14.3333 5.11986C14.4893 5.11986 14.6431 5.08336 14.7825 5.01329C14.9219 4.94321 15.0429 4.8415 15.136 4.71629L14.3333 4.12029ZM14.8266 23.8042C14.6663 23.8499 14.5 23.8711 14.3333 23.8669C14.1053 23.8669 13.9253 23.8349 13.84 23.8042L13.1733 25.6896C13.5476 25.812 13.9395 25.8719 14.3333 25.8669C14.7053 25.8669 15.1253 25.8202 15.4933 25.6896L14.8266 23.8042ZM13.8293 23.8002C12.04 23.1896 9.04931 21.5656 6.51998 18.9736C4.00132 16.3936 2 12.9203 2 8.58695H0C0 13.5869 2.31999 17.5336 5.08799 20.3709C7.84398 23.1949 11.1066 24.9842 13.184 25.6936L13.8293 23.8002ZM2 8.58695C2 5.01362 4.87732 2.13363 8.41331 2.13363V0.133636C3.76266 0.133636 0 3.92029 0 8.58695H2ZM8.41331 2.13363C9.409 2.13302 10.3909 2.36643 11.2798 2.81505C12.1687 3.26366 12.9397 3.91492 13.5306 4.71629L15.136 3.52429C14.359 2.47234 13.346 1.6175 12.1783 1.02858C11.0107 0.439662 9.72107 0.133122 8.41331 0.133636V2.13363ZM15.136 4.71629C15.728 3.91608 16.4992 3.26568 17.3879 2.81719C18.2765 2.3687 19.2579 2.13459 20.2533 2.13363V0.133636C18.9458 0.134699 17.6567 0.441929 16.4894 1.03072C15.322 1.61951 14.3087 2.4735 13.5306 3.52429L15.136 4.71629ZM20.2533 2.13363C23.7893 2.13363 26.6666 5.01362 26.6666 8.58695H28.6666C28.6666 3.92029 24.9039 0.133636 20.2533 0.133636V2.13363ZM26.6666 8.58695C26.6666 12.9203 24.6666 16.3936 22.1466 18.9736C19.6173 21.5656 16.6266 23.1896 14.8373 23.8002L15.4826 25.6936C17.56 24.9842 20.8226 23.1949 23.5786 20.3709C26.3479 17.5336 28.6666 13.5869 28.6666 8.58695H26.6666Z"
-            fill="#90A3BF"
+        <h1 className="text-[20px] leading-[150%] tracking-[-0.6px] text-black font-bold">
+          {item.title}
+        </h1>
+        {item.filled ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M16.44 3.09961C14.63 3.09961 13.01 3.97961 12 5.32961C10.99 3.97961 9.37 3.09961 7.56 3.09961C4.49 3.09961 2 5.59961 2 8.68961C2 9.87961 2.19 10.9796 2.52 11.9996C4.1 16.9996 8.97 19.9896 11.38 20.8096C11.72 20.9296 12.28 20.9296 12.62 20.8096C15.03 19.9896 19.9 16.9996 21.48 11.9996C21.81 10.9796 22 9.87961 22 8.68961C22 5.59961 19.51 3.09961 16.44 3.09961Z"
+              fill="#ED3F3F"
+            />
+          </svg>
+        ) : (
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.62 20.8096C12.28 20.9296 11.72 20.9296 11.38 20.8096C8.48 19.8196 2 15.6896 2 8.68961C2 5.59961 4.49 3.09961 7.56 3.09961C9.38 3.09961 10.99 3.97961 12 5.33961C13.01 3.97961 14.63 3.09961 16.44 3.09961C19.51 3.09961 22 5.59961 22 8.68961C22 15.6896 15.52 19.8196 12.62 20.8096Z"
+              stroke="#90A3BF"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        )}
+      </div>
+      <p className="mt-1 text-sm leading-[150%] tracking-[-0.28px] text-[#90A3BF] font-bold">
+        {item.type}
+      </p>
+      {item.recommended ? (
+        <div className="lg:my-12 lg:block justify-between items-center flex my-7 mx-auto w-full ">
+          <img
+            src={item.src}
+            className="mx-auto lg:max-w-[232px] lg:max-h-[72px] max-w-[160px] max-h-[64px]"
+            alt=""
           />
-        </svg>
-      </div>
-      <p className="text-lg text-[#90A3BF] font-[500]">Sport</p>
-      <div className="lg:my-12 my-8 ">
-        <img src="/Rectangle.png " className="mx-auto" alt="" />
-      </div>
-      <div className="flex gap-3 justify-center">
+          <div className=" lg:hidden flex flex-col gap-4 justify-between">
+            <Specs
+              svg={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 30 28"
+                  fill="none"
+                >
+                  <path
+                    d="M28.7864 10.107L26.1198 8.77362C25.6264 8.53363 25.0131 8.72029 24.7731 9.21362C24.7124 9.33071 24.6757 9.4587 24.665 9.59014C24.6543 9.72158 24.6699 9.85383 24.7108 9.97918C24.7518 10.1045 24.8173 10.2205 24.9035 10.3202C24.9898 10.42 25.095 10.5016 25.2131 10.5603L27.3331 11.6136V18.0003L22.3331 18.0136V4.33364C22.3331 1.66698 20.5465 0.333646 18.3331 0.333646H7.66649C5.45316 0.333646 3.6665 1.66698 3.6665 4.33364V26.0002H1.6665C1.11984 26.0002 0.666504 26.4536 0.666504 27.0002C0.666504 27.5469 1.11984 28.0002 1.6665 28.0002H24.3331C24.8798 28.0002 25.3331 27.5469 25.3331 27.0002C25.3331 26.4536 24.8798 26.0002 24.3331 26.0002H22.3331V20.0136L28.3331 20.0003C28.8931 20.0003 29.3331 19.5469 29.3331 19.0003V11.0003C29.3331 10.627 29.1198 10.2803 28.7864 10.107ZM6.99982 6.85363C6.99982 5.0003 8.13315 4.33364 9.51982 4.33364H16.4931C17.8665 4.33364 18.9998 5.0003 18.9998 6.85363V8.49363C18.9998 10.3336 17.8665 11.0003 16.4798 11.0003H9.51982C8.13315 11.0003 6.99982 10.3336 6.99982 8.48029V6.85363ZM7.66649 14.0003H11.6665C12.2131 14.0003 12.6665 14.4536 12.6665 15.0003C12.6665 15.5469 12.2131 16.0003 11.6665 16.0003H7.66649C7.11982 16.0003 6.66649 15.5469 6.66649 15.0003C6.66649 14.4536 7.11982 14.0003 7.66649 14.0003Z"
+                    fill="#90A3BF"
+                  />
+                </svg>
+              }
+            >
+              90L
+            </Specs>
+            <Specs
+              svg={
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="13.3333"
+                    cy="13.3333"
+                    r="13.3333"
+                    transform="matrix(1 0 0 -1 0 26.6665)"
+                    fill="#90A3BF"
+                  />
+                  <circle
+                    cx="10.6666"
+                    cy="10.6666"
+                    r="10.6666"
+                    transform="matrix(1 0 0 -1 2.6665 23.9998)"
+                    fill="white"
+                  />
+                  <circle
+                    cx="7.99998"
+                    cy="7.99998"
+                    r="7.99998"
+                    transform="matrix(1 0 0 -1 5.33301 21.333)"
+                    fill="#90A3BF"
+                  />
+                  <circle
+                    cx="5.33332"
+                    cy="5.33332"
+                    r="5.33332"
+                    transform="matrix(1 0 0 -1 7.99951 18.6665)"
+                    fill="white"
+                  />
+                  <rect
+                    width="2.66666"
+                    height="5.33332"
+                    rx="1.33333"
+                    transform="matrix(1 0 0 -1 11.9995 25.333)"
+                    fill="#90A3BF"
+                  />
+                  <rect
+                    width="5.33332"
+                    height="2.66666"
+                    rx="1.33333"
+                    transform="matrix(1 0 0 -1 19.9995 14.6665)"
+                    fill="#90A3BF"
+                  />
+                </svg>
+              }
+            >
+              Manual
+            </Specs>
+            <Specs
+              svg={
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 29 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.3104 0.758919C7.82532 0.51942 4.7973 3.15802 4.5578 6.64313C4.32288 10.0617 6.80643 13.0123 10.2833 13.3715C10.3906 13.3655 10.497 13.3728 10.5759 13.3916L10.6691 13.398C14.0826 13.5123 16.9464 10.9292 17.1946 7.51154C17.4341 4.02644 14.7955 0.998418 11.3104 0.758919Z"
+                    fill="#90A3BF"
+                  />
+                  <ellipse
+                    cx="9.38664"
+                    cy="6.16332"
+                    rx="9.38664"
+                    ry="6.16332"
+                    transform="matrix(0.997647 0.068559 0.068559 -0.997647 0.117676 26.7195)"
+                    fill="#90A3BF"
+                  />
+                  <path
+                    d="M25.4408 8.86804C25.4763 11.4632 23.4852 13.5984 20.9235 13.7298L20.857 13.7252C20.7772 13.7197 20.6974 13.7142 20.6291 13.7363C19.3342 13.7141 18.1787 13.2204 17.3395 12.4009C18.7937 11.2713 19.7047 9.48957 19.6822 7.48331C19.6622 6.4395 19.3784 5.41771 18.8572 4.51311C19.5775 4.22191 20.3579 4.11033 21.1309 4.18799C21.904 4.26564 22.6465 4.5302 23.2945 4.95884C23.9425 5.38748 24.4765 5.96734 24.8504 6.64839C25.2243 7.32943 25.427 8.09122 25.4408 8.86804Z"
+                    fill="#90A3BF"
+                  />
+                  <ellipse
+                    cx="5.34059"
+                    cy="4.83514"
+                    rx="5.34059"
+                    ry="4.83514"
+                    transform="matrix(0.997647 0.068559 0.068559 -0.997647 16.3247 24.8291)"
+                    fill="#90A3BF"
+                  />
+                </svg>
+              }
+            >
+              4 People
+            </Specs>
+          </div>
+        </div>
+      ) : (
+        <div className="lg:my-12 lg:block justify-between items-center flex my-7 mx-auto w-full ">
+          <img
+            src={item.src}
+            className="mx-auto lg:max-w-[232px] lg:max-h-[72px] max-w-[160px] max-h-[64px]"
+            alt=""
+          />
+        </div>
+      )}
+
+      <div
+        className={`${
+          item.recommended ? "hidden " : "flex"
+        } lg:flex gap-3 justify-between`}
+      >
         <Specs
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
+              width="24"
+              height="24"
               viewBox="0 0 30 28"
               fill="none"
             >
@@ -44,8 +200,8 @@ function CarsInfoCard() {
         <Specs
           svg={
             <svg
-              width="27"
-              height="27"
+              width="24"
+              height="24"
               viewBox="0 0 27 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -100,8 +256,8 @@ function CarsInfoCard() {
         <Specs
           svg={
             <svg
-              width="29"
-              height="29"
+              width="24"
+              height="24"
               viewBox="0 0 29 29"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -138,17 +294,15 @@ function CarsInfoCard() {
       </div>
       <div className="mt-7 flex justify-between">
         <div className="flex flex-col">
-          <span className="text-[24px] font-bold">
+          <span className="text-[20px] font-bold">
             $80.00/{" "}
-            <span className="text-[#90A3BF] text-lg font-[600]">day</span>
+            <span className="text-[#90A3BF] text-sm font-[700]">day</span>
           </span>{" "}
-          <span className="text-[#90A3BF] text-lg font-[600] line-through">
+          <span className="text-[#90A3BF] text-sm font-[700] line-through">
             $100.00/
           </span>
         </div>
-        <button className="px-7 text-white text-lg font-[600] bg-[#3563E9] rounded-md">
-          Rent Now
-        </button>
+        <PrimaryButton>Rent Now</PrimaryButton>
       </div>
     </div>
   );
@@ -158,9 +312,11 @@ export default CarsInfoCard;
 
 function Specs({ children, svg }) {
   return (
-    <div className="flex gap-3 items-center">
+    <div className="flex gap-1 items-center">
       {svg}
-      <p className="text-lg text-[#90A3BF] font-[500]">{children}</p>
+      <p className="text-sm leading-[150%] whitespace-nowrap text-[#90A3BF] tracking-[-0.28px] font-[500]">
+        {children}
+      </p>
     </div>
   );
 }

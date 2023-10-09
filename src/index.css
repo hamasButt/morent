@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@1&family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 body {
-  font-family: Inter, sans-serif;
+  /* font-family: Plus Jakarta Sans, sans-serif; */
+  font-family: 'Plus Jakarta Sans';
   background: #F5F5f5;
 }
 
@@ -20,15 +22,41 @@ body {
 }
 
 .bg-img {
-  background-image: url('./Vector.png');
+  background-image: url('./Vector3.png');
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top;
   background-color: rgb(84, 166, 255);
 }
 
 .bg-img2 {
-  background-image: url('./vector2.png');
+  background-image: url('./vector4.png');
   background-repeat: no-repeat;
   background-size: cover;
-  
+  background-color: #3563E9;
+
+
+}
+
+.grid-vals {
+  display: grid;
+  grid-template-columns: repeat(4, 360fr);
+  grid-template-rows: 388fr;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+
+}
+
+.pick-filter {
+  border-radius: 10px;
+  background: rgba(16, 50, 147, 0.32);
+  filter: blur(20px);
+  width: 48px;
+  height: 60px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+.input-border {
+  border-radius: 10px;
+  border: 1px solid rgba(195, 212, 233, 0.40);
 }
