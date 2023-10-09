@@ -55,7 +55,7 @@ function Navigation() {
     },
   ];
   return (
-    <div className="nav lg:fixed lg:top-0  sticky   bg-white w-full  lg:p-10 px-6 pt-8 pb-[40px] ">
+    <div className="nav lg:fixed lg:z-[5] lg:top-0  sticky   bg-white w-full  lg:p-10 px-6 pt-8 pb-[40px] ">
       <div className="flex items-center justify-between w-full">
         <div className="flex justify-between items-center w-full lg:max-w-[700px]">
           <img src="/Logo.png" alt="Logo" />
