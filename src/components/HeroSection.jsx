@@ -3,6 +3,7 @@ import CarsInfoCard from "./cards/CarsInfoCard";
 import InitialCard from "./cards/InitialCard";
 import PickNDropFilters from "./filters/PickNDropFilters";
 import PrimaryButton from "./PrimaryButton";
+import CarsSwiper from "./Swiper";
 
 const HeroSection = () => {
   let cars = [
@@ -220,7 +221,7 @@ const HeroSection = () => {
         <p className="text-base text-[#90A3BF] ">Popular Car</p>
         <p className="text-[#3563E9] text-base ">View All</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
         {cars.map((item, id) => {
           return (
             <React.Fragment key={id}>
@@ -229,6 +230,7 @@ const HeroSection = () => {
           );
         })}
       </div>
+      <CarsSwiper cars={cars} />
       <div className="w-full  font-[600] py-[10px]">
         <p className="text-base text-[#90A3BF] ">Recomendation Car</p>
       </div>

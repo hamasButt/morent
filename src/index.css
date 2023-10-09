@@ -60,3 +60,15 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(195, 212, 233, 0.40);
 }
+
+/* MySwiper.css */
+.swiper-container {
+  height: 100%;
+}
+
+.swiper-slide img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add more styles as needed */

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="lg:bg-white lg:px-[60px] px-6 lg:pt-20 pt-12 pb-[76px] pb-6 ">
+    <div className="lg:bg-white lg:px-[60px] px-6 lg:pt-20 pt-12 lg:pb-[76px] pb-6 ">
       <div className="flex lg:flex-row flex-col justify-between items-center ">
         <div className="flex flex-col  gap-4 lg:max-w-[390px] max-w-[216px] self-start">
           <img

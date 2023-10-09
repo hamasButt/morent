@@ -3,7 +3,7 @@ import PrimaryButton from "../PrimaryButton";
 
 function CarsInfoCard({ item }) {
   return (
-    <div className="lg:p-6 p-4  bg-white rounded-[12px] ">
+    <div className="lg:p-6 p-4  bg-white rounded-[12px] overflow-hidden">
       <div className="flex justify-between items-center">
         <h1 className="text-[20px] leading-[150%] tracking-[-0.6px] text-black font-bold">
           {item.title}

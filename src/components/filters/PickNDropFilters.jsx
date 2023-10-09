@@ -2,7 +2,7 @@ import React from "react";
 
 const PickNDropFilters = ({ head, radio }) => {
   return (
-    <div className="lg:px-12 lg:py-7 p-4 bg-white w-full flex flex-col  gap-1 items-start justify-start rounded-[20px] ">
+    <div className="lg:px-12 lg:py-7 p-4 overflow-hidden bg-white w-full flex flex-col  gap-1 items-start justify-start rounded-[20px] ">
       <div>
         <span className="font-[600] text-[22px] tracking-[-0.235px] text-black flex gap-2 items-center">
           {radio}
