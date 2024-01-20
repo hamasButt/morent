@@ -15,7 +15,7 @@ const InitialCard = ({ header, card, image, subHeader }) => {
           {header}
         </h1>
         <h4 className="text-white lg:text-base text-xs">{subHeader}</h4>
-        <div className="lg:max-w-[130px]">
+        <div className="lg:max-w-[130px]">   
           <PrimaryButton bgColor={card === 2 && "bg-[#54A6FF]"}>
             Rental Car
           </PrimaryButton>
